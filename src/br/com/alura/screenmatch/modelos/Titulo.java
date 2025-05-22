@@ -20,6 +20,14 @@ public class Titulo {
         this.nome = nome;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
     public boolean isInclusoNoPlano() {
         return inclusoNoPlano;
     }
