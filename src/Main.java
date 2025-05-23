@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
+        Filme meuFilme = new Filme("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1972);
         meuFilme.setDuracaoEmMinutos(175);
         System.out.println("A duração do filme é " + meuFilme.getDuracaoEmMinutos() + " minutos.");
@@ -20,10 +19,9 @@ public class Main {
         meuFilme.avaliarFilme(10);
 
         System.out.println("A soma das notas é " + meuFilme.getTotalDeAvaliacoes());
-        System.out.println(String.format("A média de notas é %.1f", meuFilme.pegaMedia()));
+        System.out.printf("A média de notas é %.1f%n", meuFilme.pegaMedia());
 
-        Filme meuFilme1 = new Filme();
-        meuFilme1.setNome("Velozes e Furiosos: Desafio em Tóquio");
+        Filme meuFilme1 = new Filme("Velozes e Furiosos: Desafio em Tóquio");
         meuFilme1.setAnoDeLancamento(2006);
         meuFilme1.setDuracaoEmMinutos(104);
 
@@ -33,10 +31,9 @@ public class Main {
         meuFilme1.avaliarFilme(9);
 
         System.out.println("A soma das notas é " + meuFilme1.getTotalDeAvaliacoes());
-        System.out.println(String.format("A média das notas é %.1f", meuFilme1.pegaMedia()));
+        System.out.printf("A média das notas é %.1f%n", meuFilme1.pegaMedia());
 
-        Serie Supernatural = new Serie();
-        Supernatural.setNome("Supernatural");
+        Serie Supernatural = new Serie("Supernatural");
         Supernatural.setAnoDeLancamento(2005);
         Supernatural.exibeFichaTecnica();
         Supernatural.setTemporadas(15);
@@ -58,9 +55,8 @@ public class Main {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoPaulo = new Filme();
+        var filmeDoPaulo = new Filme("Dogville");
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        filmeDoPaulo.setNome("Dogville");
         filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avaliarFilme(10);
 
@@ -72,7 +68,5 @@ public class Main {
         System.out.println("O primeiro filme é " + listaDeFilmes.getFirst().getNome());
         System.out.println(listaDeFilmes);
         System.out.println("O primeiro é " + listaDeFilmes.getFirst().toString());
-
-
     }
 }
