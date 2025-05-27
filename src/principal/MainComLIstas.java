@@ -5,6 +5,10 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class MainComLIstas {
     public static void main(String[] args) {
@@ -19,7 +23,7 @@ public class MainComLIstas {
 
         Serie serie = new Serie("Supernatural", 2017);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(meuFilme);
         lista.add(meuFilme1);
         lista.add(filmeDoPaulo);
@@ -31,5 +35,20 @@ public class MainComLIstas {
                 System.out.println("Classificação: " + filme.getClassificacao());
             }
         }
+
+        List<String> buscaPorArtista= new LinkedList<>();
+        buscaPorArtista.add("Misha Collins");
+        buscaPorArtista.add("Jensen Ackles");
+        buscaPorArtista.add("Jared Padalecki");
+        System.out.println("\nArtistas Antes da Ordenação: " + buscaPorArtista);
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação: " + buscaPorArtista);
+
+        Collections.sort(lista);
+        System.out.println("\nLista de Títulos Ordenados: " + lista);
+
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Filmes Ordenados por Ano: " + lista);
     }
 }
