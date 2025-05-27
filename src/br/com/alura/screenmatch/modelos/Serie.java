@@ -45,4 +45,9 @@ public class Serie extends Titulo {
     public Serie(String nome, int anoDeLancamento) {
         super(nome, anoDeLancamento);
     }
+
+    @Override
+    public String toString() {
+        return "Série: " + this.getNome() + " (" + "Ano de Lançamento: " + this.getAnoDeLancamento() + ")";
+    }
 }
