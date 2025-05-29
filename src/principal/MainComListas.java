@@ -4,13 +4,12 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MainComLIstas {
+public class MainComListas {
     public static void main(String[] args) {
         Filme meuFilme = new Filme("O Poderoso Chefão", 1972);
         meuFilme.avaliarFilme(8);
