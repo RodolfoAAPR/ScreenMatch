@@ -5,8 +5,7 @@ import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
-
-import java.util.ArrayList;
+import br.com.alura.screenmatch.servicos.GerenciadorDeTitulos;
 
 public class Main {
     public static void main(String[] args) {
@@ -58,13 +57,11 @@ public class Main {
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.avaliarFilme(10);
 
-        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
-        listaDeFilmes.add(filmeDoPaulo);
-        listaDeFilmes.add(meuFilme);
 
-        System.out.println("O tamanho da lista é " + listaDeFilmes.size());
-        System.out.println("O primeiro filme é " + listaDeFilmes.getFirst().getNome());
-        System.out.println(listaDeFilmes);
-        System.out.println("O primeiro é " + listaDeFilmes.getFirst().toString());
+        GerenciadorDeTitulos gerenciadorDeTitulos = new GerenciadorDeTitulos();
+        gerenciadorDeTitulos.adicionaTitulo(meuFilme);
+        gerenciadorDeTitulos.adicionaTitulo(meuFilme1);
+        gerenciadorDeTitulos.adicionaTitulo(filmeDoPaulo);
+        gerenciadorDeTitulos.exibeTamanhoPrimeiroLista();
     }
 }
